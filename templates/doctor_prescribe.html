@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生开药</title>
+</head>
+<body>
+医生开药
+<form method="post" action="/doctor/generatelist/{{ medicalrecord }}">
+        <table>
+            <tr>
+                <td>药品编号</td>
+                <td>名称</td>
+                <td>单价</td>
+                <td>库存</td>
+                <td>规格</td>
+                <td>制药公司</td>
+                <td>生产日期</td>
+                <td>保质期</td>
+
+            </tr>
+
+        {% for list in medicine %}
+            <tr>
+
+            {% for name, value in list.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+                <td>
+                    <input type="checkbox" name="medicine_id" value={{ list.id }}>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        </table>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

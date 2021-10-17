@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>病人信息修改</title>
+</head>
+<body>
+
+<form action="/patient/update/{{ p.id }}" method="post">
+    <p>
+        姓名：<input type="text" value="{{ p.name }}" >
+    </p>
+    <p>
+        性别：<input type="text" name="gender" value="{{ p.gender }}">
+    </p>
+    <p>
+        年龄：<input type="text" name="old" value="{{ p.old }}">
+    </p>
+    <p>
+        电话：<input type="text" name="phonenumber" value="{{ p.phonenumber }}">
+    </p>
+    <p>
+        地址：<input type="text" name="address" value="{{ p.address }}">
+    </p>
+    <p>
+        密码：<input type="text" name="password" value="{{ p.password }}">
+    </p>
+
+    <input type="submit" value="更新">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/test1.css">
+</head>
+    <body>
+        <table>
+        <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>电话号码</th>
+        <th>地址</th>
+        </tr>
+
+         {% for patient in patients %}
+            <tr>
+
+            {% for name, value in patient.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+            <br>
+
+            <a href="/test2/">前往测试2</a>
+             {% for patient in patient %}
+            <tr>
+
+            {% for name, value in patient.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+
+
+        </table>
+        <span>为什么</span>
+    </body>
+</html>

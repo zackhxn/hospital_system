@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+   <link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/managermain.css" />
+		<link rel="stylesheet" href="/css/update.css">
+    <title>新添药品</title>
+
+</head>
+<body>
+
+<div class="navbar">
+			<input type="checkbox" id="checkbox" />
+			<!-- 复选框的id属性值和label元素的for属性值必须是相同的,才能够通过点击label选中复选框 -->
+			<label for="checkbox">
+				<i class="fa fa-bars"></i>
+			</label>
+			<div class="righttitle">
+				<nav>
+
+
+					<div class="list2">
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+
+					</a>
+					</div>
+					<div class="list1">
+
+
+					<a href="/medicine/">药师</a>
+					</div>
+					<div class="list3">
+							<img src="/image/manager.png"  >
+					</div>
+
+				</nav>
+
+			</div>
+			<ul>
+				<li>
+					<img src="/image/manager.png" alt="" />
+					<span>药品管理员</span>
+				</li>
+
+				<li>
+					<a href="/medicine/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>药品库</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="/medicine/submit/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>添加药品</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+						<span>退出登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+<div class="login-body">
+<div id="form-bar">
+   <form method="post" action="/medicine/submit/">
+
+            <input type="text" name="name" placeholder="请输入药品名称">
+            <input type="text" name="price" placeholder="请输入单价">
+            <input type="text" name="number" placeholder="请输入库存">
+
+
+            <input type="text" name="specification" placeholder="请输入规格">
+       <input type="text" name="remark" placeholder="请输入生产厂商">
+          <input type="text" name="productiondate" placeholder="请输入生产日期">
+            <input type="text" name="shelflife" placeholder="请输入保质期">
+
+             <input type="submit" value="登录" id="login" style="display:none">
+            <button for="login" class="login-btn">添加</button>
+        </form>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

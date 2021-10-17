@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生信息修改</title>
+</head>
+<body>
+
+<form action="/doctor/update/{{ p.id }}" method="post">
+    <p>
+        姓名：<input type="text" value="{{ p.name }}" >
+    </p>
+    <p>
+        性别：<input type="text" name="gender" value="{{ p.gender }}">
+    </p>
+    <p>
+        年龄：<input type="text" name="old" value="{{ p.old }}">
+    </p>
+     <p>
+        科室：<input type="text" name="department" value="{{ p.department }}">
+    </p>
+    <p>
+        电话：<input type="text" name="phonenumber" value="{{ p.phonenumber }}">
+    </p>
+    <p>
+        门诊号：<input type="text" name="outpatient_id" value="{{ p.outpatient_id }}">
+    </p>
+    <p>
+        密码：<input type="text" name="password" value="{{ p.password }}">
+    </p>
+
+    <input type="submit" value="更新">
+
+</form>
+</body>
+</html>

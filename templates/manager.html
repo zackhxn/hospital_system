@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员界面</title>
+</head>
+<body>
+        <span>病人表</span>
+        <table>
+        <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>姓别</th>
+        <th>年龄</th>
+        <th>电话号码</th>
+        <th>地址</th>
+        </tr>
+
+         {% for patient in patients %}
+            <tr>
+
+            {% for name, value in patient.items %}
+                <td>{{ value }}</td>
+
+            {% endfor %}
+                <td>
+                <a href="/manager/updatepatient/{{ patient.id }}">更新</a>
+                <a href="/manager/deletepatient/{{ patient.id }}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        </table>
+         <form method="post" action="/manager/submitpatient/">
+            <input type="text" name="name">
+            <input type="text" name="gender">
+            <input type="text" name="old">
+            <input type="text" name="phonenumber">
+            <input type="text" name="address">
+
+            <input type="submit" value="提交">
+        </form>
+        <br>
+
+        <span>医生表</span>
+        <table>
+        <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>姓别</th>
+        <th>年龄</th>
+        <th>科室</th>
+         <th>手机</th>
+        <th>门诊号</th>
+        </tr>
+
+         {% for doctor in doctors %}
+            <tr>
+
+            {% for name, value in doctor.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+            <td>
+                <a href="/manager/updatedoctor/{{ doctor.id }}">更新</a>
+                <a href="/manager/deletedoctor/{{ doctor.id }}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </table>
+        <form method="post" action="/manager/submitdoctor/">
+            <input type="text" name="name">
+            <input type="text" name="gender">
+            <input type="text" name="old">
+            <input type="text" name="department">
+            <input type="text" name="phonenumber">
+            <input type="text" name="outpatient_id">
+            <input type="submit" value="提交">
+        </form>
+
+        <a href="/login/">退出登录</a>
+
+</body>
+</html>

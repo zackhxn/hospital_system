@@ -1,0 +1,170 @@
+h1{
+
+margin: 50px;
+}
+
+body{
+  background-color: #ecefff;
+  user-select: none;
+  /* 这样用户点按钮的时候就不会选中文字, 更有沉浸感 */
+  /* 唉, 我没有教人做事的意思 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  margin: 0;
+}
+
+
+
+.login-app{
+  width: 348px;
+  margin-bottom: 30px;
+}
+
+.login-header{
+  display: flex;
+}
+.login-header input[type="radio"]{
+  display: none;
+}
+.login-header label{
+  background-color: #f5f5f6;
+  font-size: 18px;
+  color: rgba(37, 38, 43, .36);
+
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  /* 这里并不是非得100%,利用的是flex的自动收缩,只要大于1/3就好了 */
+
+  cursor: pointer;
+}
+.login-header .p-btn{
+  border-top-left-radius: 12px;
+}
+.login-header .me-btn{
+  border-top-right-radius: 12px;
+}
+
+#patient:checked + .p-btn,
+#doctor:checked + .d-btn,
+#manager:checked + .m-btn,
+#medicinemanager:checked + .me-btn{
+  background-color: #fff;
+  color: #25262b;
+  cursor: default;
+}
+
+.login-body{
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  -ms-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
+}
+
+#form-bar{
+  display: flex;
+
+  transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-body form{
+  flex-shrink: 0;
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: 22px;
+
+  position: relative;
+}
+
+.login-body input{
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  height: 46px;
+  margin-bottom: 16px;
+  background-color: rgba(39, 39, 41, .04);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  /* 这个插件有点烦的, 如果注释多的话 */
+  /* 这次代码也多, 演示的话我就先把它关了 */
+  /* 源代码里兼容性代码会有的 */
+  /* 好家伙我明明应该已经关了来着 */
+  /* 可能这就是老年痴呆吧 */
+
+  font-size: 14px;
+  padding: 1px 12px;
+  color: #25262b;/* 看不出来变化吧,哎嘿! */
+}
+.login-body input::placeholder{
+  color: rgba(37, 38, 43, .36);
+}
+.login-body input:focus{
+  border: 1px solid rgba(99, 125, 255, .48);
+  background-color: #fff;
+}
+
+.m-form .vercode-btn{
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #637dff;
+  background-color: transparent;
+  border: 1px solid rgba(99, 125, 255, .24);
+
+  position: absolute;
+  right: 36px;
+  margin: 8px 0;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.login-body .login-btn{
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    129.12deg,/* 沿着这个角度的线渐变 */
+    #446dff,/* 渐变起始颜色 */
+    rgba(99, 125 ,255, .75)/* 渐变终点颜色 */
+  );
+
+  color: #fff;
+  font-size: 16px;
+
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+button{
+  cursor: pointer;
+}
+
+
+#aaa{
+text-decoration:none;
+color: black;
+}
+#aaa:hover{
+color: red;
+}

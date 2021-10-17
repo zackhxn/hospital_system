@@ -1,0 +1,47 @@
+
+
+.container {
+    position:absolute;
+    left:350px;
+    top:100px;
+	/* 溢出隐藏 */
+	overflow: hidden;
+	/* 外边距 上下为0  左右为20px */
+
+	background-color: #fff;
+	/* 盒子阴影 */
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.container table {
+	/* 让表格的边框合并在一起 */
+	border-collapse: collapse;
+}
+/* 在做pc端 不注释掉看不到效果 */
+.container table thead tr th {
+	color: #fff;
+	background-color: #4fc3a1;
+}
+/* 还是取单数 */
+.container table thead tr th:nth-child(odd) {
+	background-color: #324960;
+}
+.container table thead tr th,
+.container table tbody tr td {
+	text-align: center;
+	/* 先不加 大屏就正常了 */
+	padding: 20px 40px;
+}
+.container table tbody tr td a{
+color:black;
+	text-decoration: none;
+}
+.container table tbody tr td a:hover{
+color:red;
+
+}
+.container table tbody tr td {
+	border: 1px solid rgb(200, 200, 200);
+}
+.container table tbody tr:nth-child(odd) {
+	background-color: #f8f8f8;
+}

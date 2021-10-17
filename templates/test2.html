@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试2</title>
+</head>
+<body>
+
+
+ {% for patient in patients %}
+            <tr>
+
+            {% for name,value in patient.items %}
+
+                <td>{{ value }}</td>
+                <br>
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+这里是测试2
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药品库</title>
+</head>
+<body>
+       <table>
+        <tr>
+        <th>药品编号</th>
+        <th>名称</th>
+        <th>单价</th>
+        <th>库存</th>
+        <th>规格</th>
+        <th>生产厂商</th>
+        <th>生产日期</th>
+        <th>保质期</th>
+        </tr>
+
+         {% for m in medicine %}
+            <tr>
+
+            {% for name, value in m.items %}
+                <td>{{ value }}</td>
+
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+
+        </table>
+        <form method="post" action="/medicine/submit/">
+            <input type="text" name="name">
+            <input type="text" name="price">
+            <input type="text" name="number">
+            <input type="text" name="specification">
+            <input type="text" name="remark">
+            <input type="text" name="productiondate">
+            <input type="text" name="shelflife">
+            <input type="submit" value="提交">
+        </form>
+        <a href="/login/">退出登录</a>
+
+
+
+</body>
+</html>

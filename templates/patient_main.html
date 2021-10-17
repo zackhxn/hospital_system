@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+病人主页
+
+
+        <table>
+        <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>姓别</th>
+        <th>年龄</th>
+        <th>电话号码</th>
+        <th>地址</th>
+        </tr>
+        <tr>
+            <th>{{p.id}}</th>
+            <th>{{p.name}}</th>
+            <th>{{p.gender}}</th>
+            <th>{{p.old}}</th>
+            <th>{{p.phonenumber}}</th>
+            <th>{{p.address}}</th>
+
+        </tr>
+
+
+
+        </table>
+    <a href="/patient/update/{{ p.id }}">修改信息与密码</a>
+    <a href="/patient/register/{{ p.id }}">前往挂号</a>
+    <a href="/patient/record/{{ p.id }}">查看就诊表</a>
+<a href="/login/">退出登录</a>
+</body>
+</html>

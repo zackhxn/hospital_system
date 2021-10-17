@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员界面</title>
+      <link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/managermain.css" />
+		<link rel="stylesheet" href="/css/update.css">
+</head>
+<body>
+
+<div class="navbar">
+			<input type="checkbox" id="checkbox" />
+			<!-- 复选框的id属性值和label元素的for属性值必须是相同的,才能够通过点击label选中复选框 -->
+			<label for="checkbox">
+				<i class="fa fa-bars"></i>
+			</label>
+			<div class="righttitle">
+				<nav>
+
+
+					<div class="list2">
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+
+					</a>
+					</div>
+					<div class="list1">
+
+
+					<a href="/manager/">管理员</a>
+					</div>
+					<div class="list3">
+							<img src="/image/manager.png"  >
+					</div>
+
+				</nav>
+
+			</div>
+			<ul>
+				<li>
+					<img src="/image/manager.png" alt="" />
+					<span>管理员</span>
+				</li>
+
+				<li>
+					<a href="/manager/patient">
+						<i class="fa fa-pencil-square" ></i>
+						<span>修改病人</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/doctor">
+						<i class="fa fa-pencil-square" ></i>
+						<span>修改医生</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/submitpatient/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>添加病人</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/submitdoctor/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>添加医生</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+						<span>退出登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+
+
+<div class="container">
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>姓名</th>
+						<th>姓别</th>
+						<th>年龄</th>
+						<th>电话号码</th>
+						<th>地址</th>
+						<th>更新</th>
+						<th>删除</th>
+					</tr>
+				</thead>
+				<tbody>
+
+
+
+
+         {% for patient in patients %}
+            <tr>
+
+
+                <td>{{ patient.id }}</td>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.gender }}</td>
+                <td>{{ patient.old }}</td>
+                <td>{{ patient.phonenumber }}</td>
+                <td>{{ patient.address }}</td>
+
+
+                <td> <a href="/manager/updatepatient/{{ patient.id }}">更新</a></td>
+               <td><a href="/manager/deletepatient/{{ patient.id }}">删除</a> </td>
+
+
+            </tr>
+        {% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+
+
+</body>
+</html>

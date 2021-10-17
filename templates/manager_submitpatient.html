@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+   <link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/managermain.css" />
+		<link rel="stylesheet" href="/css/update.css">
+    <title>新添病人</title>
+
+</head>
+<body>
+
+<div class="navbar">
+			<input type="checkbox" id="checkbox" />
+			<!-- 复选框的id属性值和label元素的for属性值必须是相同的,才能够通过点击label选中复选框 -->
+			<label for="checkbox">
+				<i class="fa fa-bars"></i>
+			</label>
+			<div class="righttitle">
+				<nav>
+
+
+					<div class="list2">
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+
+					</a>
+					</div>
+					<div class="list1">
+
+
+					<a href="/manager/">管理员</a>
+					</div>
+					<div class="list3">
+							<img src="/image/manager.png"  >
+					</div>
+
+				</nav>
+
+			</div>
+			<ul>
+				<li>
+					<img src="/image/manager.png" alt="" />
+					<span>管理员</span>
+				</li>
+
+				<li>
+					<a href="/manager/patient">
+						<i class="fa fa-pencil-square" ></i>
+						<span>修改病人</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/doctor">
+						<i class="fa fa-pencil-square" ></i>
+						<span>修改医生</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/submitpatient/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>添加病人</span>
+					</a>
+				</li>
+				<li>
+					<a href="/manager/submitdoctor/">
+						<i class="fa fa-pencil-square" ></i>
+						<span>添加医生</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="/login/">
+						<i class="fa fa-sign-out" ></i>
+						<span>退出登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+<div class="login-body">
+<div id="form-bar">
+    <form method="post" action="/manager/submitpatient/" >
+
+            <input type="text" name="name" placeholder="请输入姓名">
+            <input type="text" name="gender" placeholder="请输入性别">
+            <input type="text" name="old" placeholder="请输入年龄">
+            <input type="text" name="phonenumber" placeholder="请输入电话号码">
+            <input type="text" name="address" placeholder="请输入地址">
+
+             <input type="submit" value="登录" id="login" style="display:none">
+            <button for="login" class="login-btn">注册</button>
+        </form>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

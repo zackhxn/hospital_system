@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+医生主页
+
+
+        <table>
+        <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>姓别</th>
+        <th>年龄</th>
+        <th>科室</th>
+        <th>电话号码</th>
+
+        <th>门诊</th>
+        </tr>
+        <tr>
+            <th>{{p.id}}</th>
+            <th>{{p.name}}</th>
+            <th>{{p.gender}}</th>
+            <th>{{p.old}}</th>
+            <th>{{p.department}}</th>
+            <th>{{p.phonenumber}}</th>
+            <th>{{p.outpatient_id}}</th>
+
+        </tr>
+
+
+
+        </table>
+    <a href="/doctor/update/{{ p.id }}">修改信息与密码</a>
+    <a href="/doctor/select/{{ p.id }}">收治病人</a>
+    <a href="/login/">退出登录</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药品清单</title>
+</head>
+<body>
+<!--病人看的-->
+<table>
+            <tr>
+                <td>药品编号</td>
+                <td>门诊单编号</td>
+                <td>药品单编号</td>
+                <td>病人编号</td>
+                <td>药品名称</td>
+                <td>价格</td>
+                <td>数量</td>
+
+
+            </tr>
+
+        {% for list in medicine %}
+            <tr>
+
+            {% for name, value in list.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+
+
+        </table>
+
+
+</body>
+</html>

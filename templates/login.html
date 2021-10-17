@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="/css/login.css">
+    <title>登录</title>
+
+</head>
+<body>
+<div>
+    <h1>医院管理系统</h1>
+</div>
+<div class="login-app">
+
+<!--message patient   username doctor   qrcode manager-->
+    <div class="login-header" onclick="checkRadio()">
+      <input type="radio" name="login-opt" id="patient" checked="checked">
+      <label for="patient" class="p-btn">病人</label>
+      <input type="radio" name="login-opt" id="doctor">
+      <label for="doctor" class="d-btn">医生</label>
+      <input type="radio" name="login-opt" id="manager">
+      <label for="manager" class="m-btn">管理员</label>
+      <input type="radio" name="login-opt" id="medicinemanager">
+      <label for="medicinemanager" class="me-btn">药师</label>
+    </div>
+<!--登錄主体-->
+      <div class="login-body">
+      <div id="form-bar">
+        <!-- <form-append></form-append> -->
+        <!-- 病人登录表单 -->
+        <form action="log_in/patient/" class="p-form" method="post">
+          <input type="text" name="id" placeholder="请输入编号">
+          <input type="text" name="password" placeholder="请输入密码">
+<!--          <input type="checkbox" name="" id="sure">-->
+<!--          <label for="sure" class="tobesure"><p>未注册手机登录时会自动创建新账号，我已阅读并同意<a href="">服务协议</a>和<a href="">隐私权条款</a></p></label>-->
+            <input type="submit" value="登录" id="login1" style="display:none">
+            <button for="login1" class="login-btn">登录</button>
+        </form>
+
+        <!-- 医生登录表单 -->
+        <form action="log_in/doctor/" class="d-form" method="post">
+           <input type="text" name="id" placeholder="请输入编号">
+          <input type="text" name="password" placeholder="请输入密码">
+           <input type="submit" value="登录" id="login2" style="display:none">
+            <button for="login2" class="login-btn">登录</button>
+        </form>
+        <!-- 管理员登录表单 -->
+        <form action="log_in/manager/" class="m-form" method="post">
+           <input type="text" name="id" placeholder="请输入编号">
+          <input type="text" name="password" placeholder="请输入密码">
+           <input type="submit" value="登录" id="login3" style="display:none">
+            <button for="login3" class="login-btn">登录</button>
+        </form>
+        <!-- 药师登录 -->
+          <form action="log_in/medicinemanager/" class="me-form" method="post">
+           <input type="text" name="id" placeholder="请输入编号">
+          <input type="text" name="password" placeholder="请输入密码">
+           <input type="submit" value="登录" id="login4" style="display:none">
+            <button for="login4" class="login-btn">登录</button>
+        </form>
+
+        <!-- <form-append></form-append> -->
+      </div>
+    </div>
+
+
+
+
+
+</div>
+
+<!--<form action="/login/log_in/" method="post" >-->
+<!--    <br>-->
+<!--    <input type="radio" name="self" value="病人">病人-->
+<!--    <br>-->
+<!--    <input type="radio" name="self" value="医生">医生-->
+<!--    <br>-->
+<!--    <input type="radio" name="self" value="管理员">管理员-->
+<!--    <br>-->
+<!--    <input type="radio" name="self" value="药品库管理员">药品库管理员-->
+<!--    <br>-->
+<!--    <input type="text" name="id" placeholder="编号">-->
+<!--    <input type="text" name="password" placeholder="密码">-->
+<!--    <input type="submit" value="登录">-->
+<!--</form>-->
+    <!--<a href="/patient/main/">病人登录</a>-->
+    <!--<a href="/doctor/main/">医生登录</a>-->
+    <!--<a href="/manager/">管理员登录</a>-->
+
+<div id="bottom1">
+     <a href="/login/register/" id="aaa">没有账号？点击注册</a>
+</div>
+
+{% if messages %}
+  <script>
+    {% for msg in messages %}
+      alert('{{ msg.message }}');
+    {% endfor %}
+  </script>
+{% endif %}
+
+<script src="/js/login.js"></script>
+</body>
+</html>

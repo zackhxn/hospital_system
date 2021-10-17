@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生收治病人</title>
+</head>
+<body>
+        <table>
+        <tr>
+        <th>就诊单编号</th>
+        <th>病人编号</th>
+        <th>医生编号</th>
+        <th>就诊科室</th>
+        <th>药品单编号</th>
+
+        <th>此病人为几号</th>
+        <th>这里一列要删除</th>
+        <th>现在排到第几号</th>
+        </tr>
+        {{ doctor_id }}
+
+
+        {% for list in patients %}
+            <tr>
+
+            {% for name, value in list.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+
+                <td>{{ now_queue }}</td>
+
+                <td>
+                <a href="/doctor/selectpatient/{{ list.id }}/{{ doctor_id }}">选择病人</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </table>
+</body>
+</html>

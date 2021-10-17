@@ -1,0 +1,82 @@
+
+.container {
+
+    position:absolute;
+    left:300px;
+    top:200px;
+    width:1500px;
+
+	display: flex;
+	/* 让子元素垂直排列 */
+	flex-direction: column;
+}
+.login-btn{
+position:absolute;
+left:500px;
+top:300px;
+width:300px;
+height:50px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    129.12deg,/* 沿着这个角度的线渐变 */
+    rgb(42,63,84),/* 渐变起始颜色 */
+    rgba(42,63,84, .75)/* 渐变终点颜色 */
+  );
+
+  color: #fff;
+  font-size: 16px;
+
+  margin-top: 16px;
+  margin-bottom: 20px;
+cursor: pointer;
+}
+
+.container label {
+	display: flex;
+	float:left;
+	/* 鼠标移入变小手 */
+	cursor: pointer;
+}
+.container label input {
+	/* 隐藏元素 先显示出来 */
+	display: none;
+}
+/* + 是相邻兄弟选择器 */
+.container label input + span {
+	display: flex;
+	/* 让伪元素和文字水平排列 */
+	align-items: center;
+	padding: 15px 30px;
+	margin-bottom: 10px;
+	font-size: 40px;
+	border-radius: 90px;
+	transition: all 0.3s;
+}
+/* 鼠标移入变背景颜色 */
+.container label input + span:hover {
+	background-color: #a9ccf0;
+}
+/* 选中单选按钮对应的span元素背景颜色改变 */
+.container label input:checked + span {
+	background-color: #7a9bbb;
+}
+.container label input + span::before {
+	content: "";
+	/* 伪元素是行内元素 需要转为块级元素才能设置宽高 */
+	display: block;
+	width: 60px;
+	height: 60px;
+	/* 圆角属性 */
+	border-radius: 50%;
+	margin-right: 15px;
+	background-color: #fff;
+	/* 盒子阴影 inset是内部阴影 */
+	box-shadow: 0 0 0 5px #2a3f54 inset;
+	/* 加个过渡时间 */
+	transition: all 0.3s;
+}
+.container label input:checked + span::before {
+	/* 选中的元素内部的阴影加深 */
+	box-shadow: 0 0 0 15px #2a3f54 inset;
+}

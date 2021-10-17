@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>就诊表</title>
+<!-- 这是病人看的-->
+</head>
+<body>
+
+    <table>
+        <tr>
+        <th>就诊单编号</th>
+        <th>病人编号</th>
+        <th>医生编号</th>
+        <th>科室</th>
+        <th>目前排到几号</th>
+        <th>排队号</th>
+        </tr>
+        <tr>
+            <th>{{p.id}}</th>
+            <th>{{p.patient_id}}</th>
+            <th>{{p.doctor_id}}</th>
+            <th>{{p.department}}</th>
+            <th>{{p.now_queue}}</th>
+            <th>{{p.queue}}</th>
+
+        </tr>
+
+
+
+        </table>
+</body>
+</html>

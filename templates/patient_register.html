@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门诊挂号</title>
+</head>
+<body>
+门诊挂号
+
+
+    <form action="/patient/register/{{ p.id }}" method="post">
+     <input type="radio" name="department" value="心内科">心内科
+    <input type="radio" name="department" value="呼吸科">呼吸科
+    <input type="radio" name="department" value="血液科">血液科
+    <input type="radio" name="department" value="普外科">普外科
+    <input type="radio" name="department" value="胃肠外科">胃肠外科
+    <input type="radio" name="department" value="关节科">关节科
+    <input type="radio" name="department" value="胸外科">胸外科
+    <input type="radio" name="department" value="儿外科">儿外科
+    <input type="radio" name="department" value="妇产科">妇产科
+    <input type="radio" name="department" value="皮肤科">皮肤科
+
+    <input type="submit" value="确认选择">
+
+</form>
+</body>
+</html>
